@@ -52,4 +52,9 @@ class User extends Authenticatable
      * The "type" of the primary key ID.
      */
     protected $keyType = 'uuid';
+
+    public function supports()
+    {
+        return $this->hasMany(Support::class);
+    }
 }
